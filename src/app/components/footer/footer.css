@@ -1,0 +1,50 @@
+.footer {
+  background: linear-gradient(to right, #642b73, #c6426e);
+  color: white;
+  padding: 2.5rem 1rem 1.5rem; /* More padding on top for a professional look */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally in flex */
+  text-align: center;   /* Centers the text inside the items */
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  width: 100%; /* Spans the full width of the container */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between; /* Keeps items on opposite sides on desktop */
+  align-items: center;
+}
+
+/* Responsive adjustment for Mobile */
+@media screen and (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column; /* Stacks the bottom text on mobile */
+    gap: 12px;
+  }
+}

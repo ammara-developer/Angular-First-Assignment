@@ -1,0 +1,130 @@
+.home-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 10%;
+  background-color: #fafafa;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Left Side Styling */
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.badge {
+  background: rgba(100, 43, 115, 0.1);
+  color: #642b73;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+  color: #2d2d2d;
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #642b73, #c6426e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #642b73, #c6426e);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-secondary {
+  background: white;
+  color: #642b73;
+  border: 2px solid #642b73;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 43, 115, 0.2);
+}
+
+/* Right Side Image Styling */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+/* RESPONSIVE DESIGN FOR SMALL DEVICES */
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem 5%;
+    text-align: center;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse; /* Image moves to top on mobile */
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+}
