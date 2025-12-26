@@ -5,10 +5,12 @@ import { Footer } from './components/footer/footer';
 import { Home } from "./pages/home/home";
 
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true, // Ensure this is here if you're not using Modules
-  imports: [RouterOutlet, Header, Footer, Home, ], 
+  imports: [RouterOutlet, Header, Footer, Home], 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

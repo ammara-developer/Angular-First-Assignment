@@ -1,26 +1,14 @@
 <div class="student-list">
-  <div class="page-header">
-    <h2>All Students</h2>
-    <p>Browse our student directory</p>
-  </div>
-
-  <div class="search-box">
-    <input 
-      type="text" 
-      (input)="onSearch($event)" 
-      placeholder="Search by student name..."
-      class="search-bar"
-    />
-  </div>
-
   <div class="students-container">
+
     @for (student of filteredStudents; track student.id) {
       <div class="student-card">
         <div class="card-content">
           <div class="student-avatar">
             {{ student.name.charAt(0) }}
           </div>
-          <h3>{{ student.name }}</h3>
+
+          <b>{{student.name}} </b>
           <p class="student-major">{{ student.major }}</p>
           
           <button [routerLink]="['/student', student.id]" class="details-btn">
