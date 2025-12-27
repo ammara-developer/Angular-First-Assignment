@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
-import { Home } from "./pages/home/home";
+
 
 
 
@@ -10,7 +10,7 @@ import { Home } from "./pages/home/home";
 @Component({
   selector: 'app-root',
   standalone: true, // Ensure this is here if you're not using Modules
-  imports: [RouterOutlet, Header, Footer, Home], 
+  imports: [RouterOutlet, Header, Footer], 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

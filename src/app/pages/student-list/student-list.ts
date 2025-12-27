@@ -11,7 +11,7 @@ export class StudentList {
   //array of student lists
 students = [
   {
-  id: 1,name: 'Ammara Saleem',major: 'Computer Science'},
+  id: 1,name: 'Soniya',major: 'Computer Science'},
   {id: 2,name: 'Sarah Johnson',major: 'Computer Science'},
   {id: 3,name: 'Eman Ghazi',major: 'Computer Science'},
   {id: 4,name: 'Michael Chen',major: 'Business Administration'},

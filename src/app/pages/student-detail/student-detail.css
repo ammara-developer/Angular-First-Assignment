@@ -1,30 +1,38 @@
-/* ADD THIS: The Gradient Border Wrapper */
-.card-border-wrapper {
-  /* Lighter, softer versions of your purple and pink */
-  background: linear-gradient(to right, #a17eb1, #e19bb2); 
-  padding: 3px; 
-  border-radius: 12px;
-  display: inline-block;
-}
-
+/* Container that centers the card on the screen */
 .detail-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
-  min-height: 60vh;
+  padding: 40px 20px;
+  min-height: 80vh;
+  box-sizing: border-box;
 }
 
+/* The Gradient Border Wrapper - now responsive */
+.card-border-wrapper {
+  background: linear-gradient(to right, #a17eb1, #e19bb2);
+  padding: 3px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px; /* Limits size on desktop */
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* The Card Body */
 .uiverse-card {
-  width: 350px;
+  width: 100%;
   background-color: white;
   padding: 2.25rem;
   position: relative;
   overflow: hidden;
-  border-radius: 9px; /* Match the inner curve */
+  border-radius: 9px;
+  box-sizing: border-box; /* Crucial for responsiveness */
 }
 
-/* Rest of your existing CSS remains the same... */
+/* The ID Badge in the corner */
 .id-badge {
   width: 6rem;
   height: 6rem;
@@ -45,6 +53,7 @@
   margin: 0;
 }
 
+/* Icon Styles */
 .icon-container {
   width: 3rem;
   margin-bottom: 0.75rem;
@@ -54,36 +63,7 @@
   fill: #642b73;
 }
 
-.student-name {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.student-info {
-  font-size: 0.875rem;
-  color: #71717a;
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.back-link {
-  background: none;
-  border: none;
-  color: #c6426e;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
-  font-size: 0.9rem;
-  transition: transform 0.2s;
-}
-
-.back-link:hover {
-  transform: translateX(5px);
-  text-decoration: underline;
-}
-
+/* Image Styles */
 .student-image-box {
   width: 120px;
   height: 120px;
@@ -95,14 +75,92 @@
   transition: transform 0.3s ease;
 }
 
-.s
-tudent-card:hover .student-image-box {
-  transform: scale(1.1);
-}
-
 .std-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+/* Text Content */
+.student-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  text-align: center;
+}
+
+.student-info {
+  font-size: 0.875rem;
+  color: #71717a;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.student-info p {
+  margin: 5px 0;
+}
+
+/* Button Styling */
+.back-link {
+  background: none;
+  border: none;
+  color: #c6426e;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+
+.back-link:hover {
+  transform: translateX(5px);
+  text-decoration: underline;
+}
+
+/* Error Card Styling */
+.error-wrap {
+  max-width: 300px;
+}
+
+.uiverse-card.error {
+  text-align: center;
+}
+
+/* --- RESPONSIVE MEDIA QUERY --- */
+@media (max-width: 480px) {
+  .uiverse-card {
+    padding: 1.5rem; /* Reduces padding so content doesn't feel cramped */
+  }
+
+  .student-image-box {
+    width: 100px; /* Scaled down slightly for mobile */
+    height: 100px;
+  }
+
+  .student-name {
+    font-size: 1.3rem;
+  }
+
+  .id-badge {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .id-number {
+    font-size: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.3rem;
+  }
+}
+
+
+
+
+
+
+

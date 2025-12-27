@@ -5,7 +5,6 @@
   padding: 2rem 10%;
   background-color: #fafafa;
 }
-
 .hero-section {
   display: flex;
   align-items: center;
@@ -13,13 +12,10 @@
   gap: 40px;
   width: 100%;
 }
-
-/* Left Side Styling */
 .hero-text {
   flex: 1;
   max-width: 600px;
 }
-
 .badge {
   background: rgba(100, 43, 115, 0.1);
   color: #642b73;
@@ -52,7 +48,7 @@
   line-height: 1.6;
 }
 
-/* Buttons */
+
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -84,7 +80,7 @@
   box-shadow: 0 10px 20px rgba(100, 43, 115, 0.2);
 }
 
-/* Right Side Image Styling */
+
 .hero-image {
   flex: 1;
   display: flex;
@@ -96,6 +92,63 @@
   max-width: 500px;
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+ 
+.btn {
+ --color: #642b73;
+ --color2: white;
+ padding: 0.8em 1.75em;
+ background-color: transparent;
+ border-radius: 6px;
+ border: .3px solid var(--color);
+ transition: .5s;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ z-index: 1;
+ font-weight: 300;
+ font-size: 17px;
+ font-family: 'Roboto', 'Segoe UI', sans-serif;
+ text-transform: uppercase;
+ color: var(--color);
+}
+
+.btn::after, .btn::before {
+ content: '';
+ display: block;
+ height: 100%;
+ width: 100%;
+ transform: skew(90deg) translate(-50%, -50%);
+ position: absolute;
+ inset: 50%;
+ left: 25%;
+ z-index: -1;
+ transition: .5s ease-out;
+ background: linear-gradient(to right, #642b73, #c6426e);
+}
+
+.btn::before {
+ top: -50%;
+ left: -25%;
+ transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+ transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+ transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+ color: var(--color2);
+}
+
+.btn:active {
+ filter: brightness(.7);
+ transform: scale(.98);
 }
 
 /* RESPONSIVE DESIGN FOR SMALL DEVICES */
@@ -112,7 +165,7 @@
   }
 
   .hero-section {
-    flex-direction: column-reverse; /* Image moves to top on mobile */
+    flex-direction: column-reverse; 
   }
 
   .hero-text {

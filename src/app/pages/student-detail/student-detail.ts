@@ -16,7 +16,7 @@ export class StudentDetail implements OnInit {
   student: any = null; 
   //array of student details    
   students = [
-  { id: 1, name: 'Ammara Saleem', major: 'Computer Science', imageUrl: 'images/std1.jpg' , enrollmentYear: 2010 },
+  { id: 1, name: 'Sonia', major: 'Computer Science', imageUrl: 'images/std1.jpg' , enrollmentYear: 2010 },
   { id: 2, name: 'Sarah Johnson', major: 'Computer Science', imageUrl: 'images/std1.jpg' ,enrollmentYear: 2011},
   { id: 3, name: 'Eman Ghazi', major: 'Computer Science', imageUrl: 'images/std1.jpg', enrollmentYear: 2012 },
   { id: 4, name: 'Michael Chen', major: 'Business Administration', imageUrl: 'images/std1.jpg', enrollmentYear: 2013 },
@@ -33,10 +33,10 @@ export class StudentDetail implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // Get the ID from the URL parameter
+    //  for Getting  the ID from the URL parameter
     const idFromRoute = Number(this.route.snapshot.paramMap.get('id'));
 
-    // Find the student in the array using the ID
+    //  for Finding  the student in the array using the ID
     this.student = this.students.find(s => s.id === idFromRoute);
   }
 }
